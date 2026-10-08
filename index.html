@@ -74,9 +74,9 @@ footer a { color: rgb(0,102,204); text-decoration: none; }
   <div class="card-header">
     <div class="card-num" style="background:#7b1fa2;">2</div>
     <div class="card-title-area">
-      <h3><a href="https://rkn.gov.ru/activity/personal-data/p3460/" target="_blank" rel="noopener">Роскомнадзор — методические рекомендации по обезличиванию ПДн</a> — rkn.gov.ru</h3>
-      <p class="summary">Официальные методические рекомендации Роскомнадзора по обезличиванию персональных данных. Описывает цели, методы (замена, удаление, обобщение, шифрование) и требования к доказательной базе того, что данные стали неперсонализированными.</p>
-      <p class="useful"><strong>Чем полезно:</strong> аргумент для юриста и службы безопасности, что «мы загрузили в ИИ не персональные, а обезличенные данные». Метод замены идентификаторов плейсхолдерами ([ФИО_1], [ИНН_1], [Сеть 1]) — это частный случай метода замены из рекомендаций.</p>
+      <h3><a href="https://www.consultant.ru/document/cons_doc_LAW_511184/" target="_blank" rel="noopener">Приказ Роскомнадзора №140 от 19.06.2025</a> — consultant.ru</h3>
+      <p class="summary">Действующий приказ Роскомнадзора «Об утверждении требований к обезличиванию персональных данных и методов обезличивания». Применяется с 1 сентября 2025 года для всех операторов ПДн. Описывает методы: введение идентификаторов, изменение состава или семантики, перемешивание, разделение данных на части, обобщение.</p>
+      <p class="useful"><strong>Чем полезно:</strong> аргумент для юриста и службы безопасности, что «мы загрузили в ИИ не персональные, а обезличенные данные». Метод замены идентификаторов плейсхолдерами ([ФИО_1], [ИНН_1], [Сеть 1]) — это частный случай метода «введение обозначений на замену данных» из приказа №140. Действует с 1 сентября 2025 года.</p>
     </div>
   </div>
 </div>
@@ -144,9 +144,9 @@ footer a { color: rgb(0,102,204); text-decoration: none; }
   <div class="card-header">
     <div class="card-num" style="background:#7b1fa2;">8</div>
     <div class="card-title-area">
-      <h3><a href="https://habr.com/ru/search/?q=RAG" target="_blank" rel="noopener">Habr — обзорные статьи по RAG на русском</a> — habr.com</h3>
-      <p class="summary">Подборка русскоязычных статей по Retrieval Augmented Generation: что это, как устроено, какие библиотеки использовать (LangChain, LlamaIndex, FAISS), примеры внедрения в российских компаниях. Включая разборы практических кейсов от разработчиков.</p>
-      <p class="useful"><strong>Чем полезно:</strong> для разговора с руководством на русском. Когда спрашивают «а что такое RAG и зачем оно нам» — подборка статей на Habr помогает объяснить концепцию без технического жаргона и показать, что это уже работает в российских реалиях.</p>
+      <h3><a href="https://vc.ru/ai/3173511-chto-takoe-rag-i-kak-neirosset-otvechaet-po-dokumentam-kompanii" target="_blank" rel="noopener">Что такое RAG простыми словами</a> · vc.ru</h3>
+      <p class="summary">Объяснение RAG на бизнес-примере: как нейросеть отвечает по документам компании. Без кода и технического жаргона: что это, зачем нужно, как выглядит на практике и где работает, а где нет. Автор — Анжела Богданова, ИИ-консалтинг.</p>
+      <p class="useful"><strong>Чем полезно:</strong> для разговора с руководством и коллегами без технического бэкграунда. Подходит как первое чтение перед тем, как объяснять, почему блокнот «отвечает только по источникам». Автор честно приводит ограничения: даже с RAG 17–33% юридических ИИ-сервисов в США дают ошибки, поэтому сноску всегда нужно открывать.</p>
     </div>
   </div>
 </div>
@@ -178,11 +178,11 @@ footer a { color: rgb(0,102,204); text-decoration: none; }
 <div class="cheatsheet">
   <h2>📌 Шпаргалка по выбору — что открыть в какой ситуации</h2>
   <div class="cheat-row"><span class="cheat-task">Нужно разобраться в длинном отчёте по первоисточнику</span><span class="cheat-arrow">→</span><span class="cheat-tool">Gemini Notebook + Google Cloud RAG</span></div>
-  <div class="cheat-row"><span class="cheat-task">Нужно убрать личные данные перед загрузкой</span><span class="cheat-arrow">→</span><span class="cheat-tool">Методика Роскомнадзора + зоны (красная/жёлтая/зелёная)</span></div>
+  <div class="cheat-row"><span class="cheat-task">Нужно убрать личные данные перед загрузкой</span><span class="cheat-arrow">→</span><span class="cheat-tool">Приказ Роскомнадзора №140/2025 + зоны (красная/жёлтая/зелёная)</span></div>
   <div class="cheat-row"><span class="cheat-task">Нужно понять, что в принципе нельзя класть в ИИ</span><span class="cheat-arrow">→</span><span class="cheat-tool">152-ФЗ + раздел рисков из памятки занятия</span></div>
   <div class="cheat-row"><span class="cheat-task">Нужно написать сильную системную инструкцию</span><span class="cheat-arrow">→</span><span class="cheat-tool">Prompting Guide (DAIR.AI) — раздел System Prompting</span></div>
   <div class="cheat-row"><span class="cheat-task">Нужно доказать безопасность ИИ-проекта руководству</span><span class="cheat-arrow">→</span><span class="cheat-tool">NIST AI RMF + OWASP Top 10 for LLM</span></div>
-  <div class="cheat-row"><span class="cheat-task">Нужно объяснить ценность RAG внутри отдела</span><span class="cheat-arrow">→</span><span class="cheat-tool">Обзор RAG на Habr + материалы из занятия</span></div>
+  <div class="cheat-row"><span class="cheat-task">Нужно объяснить ценность RAG внутри отдела</span><span class="cheat-arrow">→</span><span class="cheat-tool">vc.ru «RAG простыми словами» + материалы из занятия</span></div>
   <div class="cheat-row"><span class="cheat-task">Нужно начать с чужого корпоративного опыта</span><span class="cheat-arrow">→</span><span class="cheat-tool">McKinsey «The State of AI» — глобальный срез</span></div>
   <div class="cheat-row"><span class="cheat-task">Нужно обучить ИИ делать что-то конкретное по правилам</span><span class="cheat-arrow">→</span><span class="cheat-tool">Google Cloud — Role Prompting + пятёрка «Роль + Контекст + Знания + Формат + Запреты»</span></div>
 </div>
