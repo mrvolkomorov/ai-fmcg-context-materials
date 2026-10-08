@@ -52,7 +52,7 @@ footer a { color: rgb(0,102,204); text-decoration: none; }
 
 <header>
   <h1>📁 Материалы <span>AI для FMCG — ИИ-контекст</span></h1>
-  <p class="sub">10 источников для самостоятельного изучения к занятию 4: безопасность данных, обезличивание, паттерны системных инструкций, RAG и корпоративные стандарты внедрения ИИ в рабочие процессы</p>
+  <p class="sub">10 источников для самостоятельного изучения к занятию 4: безопасность данных при загрузке в ИИ, как пользоваться Gemini Notebook и RAG-решениями, обзоры по теме безопасности LLM</p>
   <p class="meta">Обновлено: <strong>8 октября 2026</strong></p>
   <a class="back-link" href="https://mrvolkomorov.github.io/ai-fmcg-portal/" target="_blank" rel="noopener">← Назад к каталогу AI для FMCG</a>
 </header>
@@ -92,15 +92,15 @@ footer a { color: rgb(0,102,204); text-decoration: none; }
   </div>
 </div>
 
-<div class="section-title">Промпт-инжиниринг — как писать сильные системные инструкции</div>
+<div class="section-title">Инструменты и решения — как пользоваться проектами и блокнотами</div>
 
 <div class="card">
   <div class="card-header">
     <div class="card-num" style="background:#e65100;">4</div>
     <div class="card-title-area">
-      <h3><a href="https://www.promptingguide.ai/" target="_blank" rel="noopener">Prompting Guide</a> · DAIR.AI — promptingguide.ai</h3>
-      <p class="summary">Независимый открытый гайд по промпт-инжинирингу от команды DAIR.AI. Покрывает базовые техники (zero-shot, few-shot, chain-of-thought), продвинутые (ReAct, self-consistency), риски (prompt injection, jailbreak) и паттерны системных инструкций для ассистентов.</p>
-      <p class="useful"><strong>Чем полезно:</strong> раздел «System prompting» — основа для пятёрки «Роль + Контекст + Знания + Формат + Запреты + Нет данных» из занятия. В отличие от гайдов вендоров, не привязан к конкретному сервису — работает как для проектов в ChatGPT, так и для Claude, Gemini Notebook, корпоративных LLM.</p>
+      <h3><a href="https://vc.ru/ai/3164967-gemini-notebook-chto-novogo-v-notebooklm" target="_blank" rel="noopener">NotebookLM стал Gemini Notebook</a> · vc.ru</h3>
+      <p class="summary">Большой обзор от PromtHub: что именно изменилось после ребрендинга NotebookLM в Gemini Notebook 16 июля 2026, какие функции появились (голосовой ввод, запись лекций, интерактивные обзоры, короткие видеосводки), кому сервис полезен и где проходит граница бесплатного тарифа. Также разобраны региональные ограничения и приватность данных.</p>
+      <p class="useful"><strong>Чем полезно:</strong> закрывает пробел между занятием и реальным использованием Gemini Notebook. Из презентации понятно «что это и зачем», из обзора — «как именно загрузить источники, включить русский язык, сгенерировать подкаст или тест для команды». Подходит как первое чтение перед тем, как заводить рабочий блокнот отдела.</p>
     </div>
   </div>
 </div>
@@ -151,15 +151,15 @@ footer a { color: rgb(0,102,204); text-decoration: none; }
   </div>
 </div>
 
-<div class="section-title">Корпоративные стандарты — как не изобретать велосипед</div>
+<div class="section-title">Обзоры и безопасность LLM — что почитать по теме глубже</div>
 
 <div class="card">
   <div class="card-header">
     <div class="card-num" style="background:#e65100;">9</div>
     <div class="card-title-area">
-      <h3><a href="https://owasp.org/www-project-top-10-for-large-language-model-applications/" target="_blank" rel="noopener">OWASP Top 10 for LLM Applications</a> — owasp.org</h3>
-      <p class="summary">Список из десяти наиболее критичных рисков при работе с LLM-приложениями: prompt injection, insecure output handling, training data poisoning, model DoS и другие. Поддерживается открытым сообществом OWASP, обновляется ежегодно.</p>
-      <p class="useful"><strong>Чем полезно:</strong> опорный список рисков для регламента работы с ИИ в отделе. Когда обсуждаете с безопасниками, что «мы загружаем файлы в ИИ», полезно показать им, что вы знакомы с этим списком и проверили свои сценарии по нему.</p>
+      <h3><a href="https://habr.com/ru/companies/owasp/articles/893712" target="_blank" rel="noopener">OWASP LLM Top 10 — полный разбор на русском</a> · Habr</h3>
+      <p class="summary">Официальный перевод OWASP LLM Top 10 на русский, сделанный сообществом OWASP Russia и компанией Raft. Разобраны все десять категорий рисков: prompt injection, раскрытие чувствительной информации, уязвимости в цепочке поставок, отравление данных, чрезмерные полномочия агента, утечка системного промпта и другие. К каждой угрозе — примеры атак и стратегии защиты.</p>
+      <p class="useful"><strong>Чем полезно:</strong> когда на вопрос «а не вредно ли загружать документы в ИИ» юрист или безопасник попросят обоснование, эта страница — готовый ответ. Содержит и устаревший OWASP LLM Top 10 2023, и упоминание новой редакции 2026 года (категория Excessive Agency поднялась с 6 на 3 место из-за агентных внедрений). Подходит как памятка «что проверять перед загрузкой».</p>
     </div>
   </div>
 </div>
@@ -168,9 +168,9 @@ footer a { color: rgb(0,102,204); text-decoration: none; }
   <div class="card-header">
     <div class="card-num" style="background:#e65100;">10</div>
     <div class="card-title-area">
-      <h3><a href="https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai" target="_blank" rel="noopener">McKinsey — The State of AI</a> — mckinsey.com</h3>
-      <p class="summary">Ежегодный отчёт McKinsey о состоянии ИИ в корпоративных процессах: где компании внедряют, какие функции первыми получают эффект, какие барьеры останавливают, сколько часов экономится. Глобальный срез по индустриям, включая retail и CPG.</p>
-      <p class="useful"><strong>Чем полезно:</strong> для презентации ценности ИИ-проектов в отделе. Цифры McKinsey по экономии времени (3–5 часов в неделю у активных пользователей) — это аргумент, который понимает финансовый директор и совет директоров. На русском такие отчёты появляются с задержкой, в оригинале — свежее.</p>
+      <h3><a href="https://aws.amazon.com/what-is/retrieval-augmented-generation/" target="_blank" rel="noopener">AWS — What is Retrieval-Augmented Generation</a> — aws.amazon.com</h3>
+      <p class="summary">Подробное объяснение концепции RAG от AWS: что это (фреймворк, который подключает LLM к внешней базе знаний), как работает (пять шагов от запроса пользователя до готового ответа со ссылками), чем отличается от semantic search, какие задачи решает и какие есть ограничения. Содержит схему процесса и примеры использования в корпоративных сценариях.</p>
+      <p class="useful"><strong>Чем полезно:</strong> расширяет понимание, которое даёт NotebookLM на занятии. Из презентации видно, что блокнот «отвечает только из источников» — из этого материала понятно, как это устроено технически: retrieval + augmented prompt + генерация со ссылками. Подходит когда нужно объяснить руководству, почему нельзя просто «спросить у GPT» там, где важна точность по конкретным документам.</p>
     </div>
   </div>
 </div>
@@ -180,11 +180,11 @@ footer a { color: rgb(0,102,204); text-decoration: none; }
   <div class="cheat-row"><span class="cheat-task">Нужно разобраться в длинном отчёте по первоисточнику</span><span class="cheat-arrow">→</span><span class="cheat-tool">Gemini Notebook + Google Cloud RAG</span></div>
   <div class="cheat-row"><span class="cheat-task">Нужно убрать личные данные перед загрузкой</span><span class="cheat-arrow">→</span><span class="cheat-tool">Приказ Роскомнадзора №140/2025 + зоны (красная/жёлтая/зелёная)</span></div>
   <div class="cheat-row"><span class="cheat-task">Нужно понять, что в принципе нельзя класть в ИИ</span><span class="cheat-arrow">→</span><span class="cheat-tool">152-ФЗ + раздел рисков из памятки занятия</span></div>
-  <div class="cheat-row"><span class="cheat-task">Нужно написать сильную системную инструкцию</span><span class="cheat-arrow">→</span><span class="cheat-tool">Prompting Guide (DAIR.AI) — раздел System Prompting</span></div>
-  <div class="cheat-row"><span class="cheat-task">Нужно доказать безопасность ИИ-проекта руководству</span><span class="cheat-arrow">→</span><span class="cheat-tool">NIST AI RMF + OWASP Top 10 for LLM</span></div>
-  <div class="cheat-row"><span class="cheat-task">Нужно объяснить ценность RAG внутри отдела</span><span class="cheat-arrow">→</span><span class="cheat-tool">vc.ru «RAG простыми словами» + материалы из занятия</span></div>
-  <div class="cheat-row"><span class="cheat-task">Нужно начать с чужого корпоративного опыта</span><span class="cheat-arrow">→</span><span class="cheat-tool">McKinsey «The State of AI» — глобальный срез</span></div>
-  <div class="cheat-row"><span class="cheat-task">Нужно обучить ИИ делать что-то конкретное по правилам</span><span class="cheat-arrow">→</span><span class="cheat-tool">Google Cloud — Role Prompting + пятёрка «Роль + Контекст + Знания + Формат + Запреты»</span></div>
+  <div class="cheat-row"><span class="cheat-task">Нужно впервые завести рабочий блокнот</span><span class="cheat-arrow">→</span><span class="cheat-tool">vc.ru «NotebookLM стал Gemini Notebook» + раздатки занятия</span></div>
+  <div class="cheat-row"><span class="cheat-task">Нужно доказать безопасность ИИ-проекта руководству</span><span class="cheat-arrow">→</span><span class="cheat-tool">Habr OWASP LLM Top 10 + NIST AI RMF</span></div>
+  <div class="cheat-row"><span class="cheat-task">Нужно объяснить ценность RAG внутри отдела</span><span class="cheal-arrow">→</span><span class="cheat-tool">vc.ru «RAG простыми словами» + материалы из занятия</span></div>
+  <div class="cheat-row"><span class="cheat-task">Нужно объяснить руководству, как технически работает блокнот</span><span class="cheat-arrow">→</span><span class="cheat-tool">AWS «What is RAG» + vc.ru про Gemini Notebook</span></div>
+  <div class="cheat-row"><span class="cheat-task">Нужно понять, как технически работает «ответ по источникам»</span><span class="cheat-arrow">→</span><span class="cheat-tool">Google Cloud «Retrieval Augmented Generation»</span></div>
 </div>
 
 <footer>
