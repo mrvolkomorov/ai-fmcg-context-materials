@@ -52,7 +52,7 @@ footer a { color: rgb(0,102,204); text-decoration: none; }
 
 <header>
   <h1>📁 Материалы <span>AI для FMCG — ИИ-контекст</span></h1>
-  <p class="sub">10 источников для самостоятельного изучения к занятию 4: безопасность данных при загрузке в ИИ, как пользоваться Gemini Notebook и RAG-решениями, обзоры по теме безопасности LLM</p>
+  <p class="sub">10 источников для самостоятельного изучения к занятию 4: безопасность данных при загрузке в ИИ, как пользоваться Gemini Notebook и другими RAG-решениями (включая российские сервисы), обзоры технологии RAG в чат-ботах</p>
   <p class="meta">Обновлено: <strong>8 октября 2026</strong></p>
   <a class="back-link" href="https://mrvolkomorov.github.io/ai-fmcg-portal/" target="_blank" rel="noopener">← Назад к каталогу AI для FMCG</a>
 </header>
@@ -151,15 +151,15 @@ footer a { color: rgb(0,102,204); text-decoration: none; }
   </div>
 </div>
 
-<div class="section-title">Обзоры и безопасность LLM — что почитать по теме глубже</div>
+<div class="section-title">RAG в чат-ботах — где и как это работает</div>
 
 <div class="card">
   <div class="card-header">
     <div class="card-num" style="background:#e65100;">9</div>
     <div class="card-title-area">
-      <h3><a href="https://habr.com/ru/companies/owasp/articles/893712" target="_blank" rel="noopener">OWASP LLM Top 10 — полный разбор на русском</a> · Habr</h3>
-      <p class="summary">Официальный перевод OWASP LLM Top 10 на русский, сделанный сообществом OWASP Russia и компанией Raft. Разобраны все десять категорий рисков: prompt injection, раскрытие чувствительной информации, уязвимости в цепочке поставок, отравление данных, чрезмерные полномочия агента, утечка системного промпта и другие. К каждой угрозе — примеры атак и стратегии защиты.</p>
-      <p class="useful"><strong>Чем полезно:</strong> когда на вопрос «а не вредно ли загружать документы в ИИ» юрист или безопасник попросят обоснование, эта страница — готовый ответ. Содержит и устаревший OWASP LLM Top 10 2023, и упоминание новой редакции 2026 года (категория Excessive Agency поднялась с 6 на 3 место из-за агентных внедрений). Подходит как памятка «что проверять перед загрузкой».</p>
+      <h3><a href="https://360.yandex.ru/blog/news/chat-s-alisoi-pro-teper-i-v-yandeks-pochte-ii-assistent-otvechaet-na-voprosi-po-pismam" target="_blank" rel="noopener">Алиса Про в Яндекс Почте: ИИ-ассистент отвечает по письмам</a> · Яндекс 360</h3>
+      <p class="summary">Официальный обзор от Яндекса: как Алиса Про (Alice AI LLM) ищет информацию в письмах и вложениях (PDF, документы, таблицы, презентации) и отвечает на вопросы по смыслу, а не по ключевым словам. В основе лежит RAG-система (Retrieval Augmented Generation), которая объединяет знания генеративной модели и факты, извлечённые из переписки. Работает в защищённом контуре Яндекс 360, не сохраняет данные и не передаёт их для обучения.</p>
+      <p class="useful"><strong>Чем полезно:</strong> это, по сути, RAG-решение от Яндекса — аналог Gemini Notebook в российской экосистеме. Из презентации понятно, что блокнот от Google умеет отвечать по источникам; Алиса Про умеет то же самое в почте и вложениях, плюс доступна в России без VPN. Подходит как пример для разговора «а есть ли что-то похожее у нас» и как источник для сравнения «наш сервис vs западный».</p>
     </div>
   </div>
 </div>
@@ -168,9 +168,9 @@ footer a { color: rgb(0,102,204); text-decoration: none; }
   <div class="card-header">
     <div class="card-num" style="background:#e65100;">10</div>
     <div class="card-title-area">
-      <h3><a href="https://aws.amazon.com/what-is/retrieval-augmented-generation/" target="_blank" rel="noopener">AWS — What is Retrieval-Augmented Generation</a> — aws.amazon.com</h3>
-      <p class="summary">Подробное объяснение концепции RAG от AWS: что это (фреймворк, который подключает LLM к внешней базе знаний), как работает (пять шагов от запроса пользователя до готового ответа со ссылками), чем отличается от semantic search, какие задачи решает и какие есть ограничения. Содержит схему процесса и примеры использования в корпоративных сценариях.</p>
-      <p class="useful"><strong>Чем полезно:</strong> расширяет понимание, которое даёт NotebookLM на занятии. Из презентации видно, что блокнот «отвечает только из источников» — из этого материала понятно, как это устроено технически: retrieval + augmented prompt + генерация со ссылками. Подходит когда нужно объяснить руководству, почему нельзя просто «спросить у GPT» там, где важна точность по конкретным документам.</p>
+      <h3><a href="https://vc.ru/ai/2951674-rag-chto-eto-takoe-i-kak-on-pomogaet" target="_blank" rel="noopener">Что такое RAG и зачем он нужен</a> · vc.ru</h3>
+      <p class="summary">Большой обзор от DevGeek: что такое RAG (Retrieval Augmented Generation) и как он решает главные проблемы языковых моделей — фиксированный cutoff, галлюцинации, отсутствие доступа к вашим документам. Разобраны оба этапа: подготовка данных (нарезка на чанки, векторизация) и ответ на запрос (поиск + генерация со ссылками). Обзор готовых платформ с RAG: Amazon Bedrock Knowledge Bases, Azure AI Search, Google Vertex AI Search, облачные LLM (Claude, GPT, Gemini) и открытые (Llama, Mistral).</p>
+      <p class="useful"><strong>Чем полезно:</strong> вторая ступень понимания RAG после карточек № 6, 7 и 8. Из презентации и Gemini Notebook понятно «что это и как пользоваться», из этой статьи — «как это устроено технически и какие ещё платформы это умеют». Подходит когда нужно сравнить: что выбрать — Notebook, Алису Pro, проект в ChatGPT или собственное RAG-решение на облаке.</p>
     </div>
   </div>
 </div>
@@ -181,9 +181,9 @@ footer a { color: rgb(0,102,204); text-decoration: none; }
   <div class="cheat-row"><span class="cheat-task">Нужно убрать личные данные перед загрузкой</span><span class="cheat-arrow">→</span><span class="cheat-tool">Приказ Роскомнадзора №140/2025 + зоны (красная/жёлтая/зелёная)</span></div>
   <div class="cheat-row"><span class="cheat-task">Нужно понять, что в принципе нельзя класть в ИИ</span><span class="cheat-arrow">→</span><span class="cheat-tool">152-ФЗ + раздел рисков из памятки занятия</span></div>
   <div class="cheat-row"><span class="cheat-task">Нужно впервые завести рабочий блокнот</span><span class="cheat-arrow">→</span><span class="cheat-tool">vc.ru «NotebookLM стал Gemini Notebook» + раздатки занятия</span></div>
-  <div class="cheat-row"><span class="cheat-task">Нужно доказать безопасность ИИ-проекта руководству</span><span class="cheat-arrow">→</span><span class="cheat-tool">Habr OWASP LLM Top 10 + NIST AI RMF</span></div>
+  <div class="cheat-row"><span class="cheat-task">Нужно показать, как RAG выглядит в российском сервисе</span><span class="cheat-arrow">→</span><span class="cheat-tool">Яндекс Алиса Про в Яндекс Почте + NIST AI RMF</span></div>
   <div class="cheat-row"><span class="cheat-task">Нужно объяснить ценность RAG внутри отдела</span><span class="cheat-arrow">→</span><span class="cheat-tool">vc.ru «RAG простыми словами» + материалы из занятия</span></div>
-  <div class="cheat-row"><span class="cheat-task">Нужно объяснить руководству, как технически работает блокнот</span><span class="cheat-arrow">→</span><span class="cheat-tool">AWS «What is RAG» + vc.ru про Gemini Notebook</span></div>
+  <div class="cheat-row"><span class="cheat-task">Нужно объяснить руководству, как технически работает RAG</span><span class="cheat-arrow">→</span><span class="cheat-tool">vc.ru «Что такое RAG и зачем он нужен» + Google Cloud RAG</span></div>
   <div class="cheat-row"><span class="cheat-task">Нужно понять, как технически работает «ответ по источникам»</span><span class="cheat-arrow">→</span><span class="cheat-tool">Google Cloud «Retrieval Augmented Generation»</span></div>
 </div>
 
