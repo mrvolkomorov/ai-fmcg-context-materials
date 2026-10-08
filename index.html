@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Материалы к занятию 4 — ИИ, который помнит контекст</title>
+<style>
+*, ::before, ::after { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans", sans-serif; background: rgb(245,245,247); color: rgb(29,29,31); line-height: 1.55; padding: 20px; }
+.container { max-width: 960px; margin: 0 auto; }
+header { text-align: center; padding: 48px 0 12px; }
+header h1 { font-size: 2em; font-weight: 700; letter-spacing: -0.025em; margin-bottom: 6px; }
+header h1 span { color: rgb(0,102,204); }
+header .sub { color: rgb(110,110,115); font-size: 1.05em; max-width: 640px; margin: 0 auto; }
+header .meta { color: rgb(154,154,159); font-size: 0.85em; margin-top: 10px; }
+.back-link { display: inline-block; margin-top: 14px; padding: 8px 18px; background: rgb(0,102,204); color: #fff; border-radius: 8px; text-decoration: none; font-size: 0.85em; font-weight: 500; }
+.back-link:hover { background: rgb(0,92,184); }
+
+.section-title { font-size: 0.8em; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: rgb(110,110,115); margin: 36px 0 12px; }
+
+.card { background: rgb(255,255,255); border-radius: 14px; margin-bottom: 12px; box-shadow: rgba(0,0,0,0.07) 0 1px 3px; overflow: hidden; }
+.card-header { display: flex; align-items: stretch; }
+.card-num { width: 52px; display: flex; align-items: center; justify-content: center; font-size: 1.1em; font-weight: 700; color: rgb(255,255,255); flex-shrink: 0; background: rgb(0,102,204); }
+.card-title-area { flex: 1 1 0%; padding: 16px 20px 12px; }
+.card-title-area h3 { font-size: 1.05em; font-weight: 600; margin: 2px 0 4px; line-height: 1.4; }
+.card-title-area h3 a { color: rgb(0,102,204); text-decoration: none; }
+.card-title-area h3 a:hover { text-decoration: underline; }
+.card-title-area .summary { font-size: 0.9em; color: rgb(60,60,65); margin-bottom: 8px; }
+.card-title-area .useful { font-size: 0.85em; color: rgb(110,110,115); background: rgb(245,245,247); border-left: 3px solid rgb(0,102,204); padding: 8px 12px; border-radius: 0 8px 8px 0; }
+.card-title-area .useful strong { color: rgb(29,29,31); font-weight: 600; }
+
+.cheatsheet { background: rgb(255,255,255); border-radius: 14px; margin: 36px 0 12px; box-shadow: rgba(0,0,0,0.07) 0 1px 3px; padding: 22px 24px; }
+.cheatsheet h2 { font-size: 1.15em; font-weight: 700; margin-bottom: 14px; }
+.cheat-row { display: flex; flex-wrap: wrap; gap: 8px 14px; padding: 7px 0; border-bottom: 1px solid rgb(240,240,242); font-size: 0.9em; align-items: baseline; }
+.cheat-row:last-child { border-bottom: none; }
+.cheat-task { font-weight: 600; flex: 1 1 260px; min-width: 220px; }
+.cheat-arrow { color: rgb(154,154,159); }
+.cheat-tool { color: rgb(0,102,204); font-weight: 500; flex: 1 1 300px; }
+
+footer { text-align: center; padding: 32px 0 20px; color: rgb(154,154,159); font-size: 0.82em; }
+footer a { color: rgb(0,102,204); text-decoration: none; }
+@media (max-width: 600px) {
+  body { padding: 12px; }
+  header h1 { font-size: 1.5em; }
+  .card-num { width: 38px; font-size: 0.9em; }
+  .card-title-area { padding: 12px 14px 8px; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<header>
+  <h1>📁 Материалы <span>AI для FMCG — ИИ-контекст</span></h1>
+  <p class="sub">10 источников для самостоятельного изучения к занятию 4: безопасность данных, обезличивание, паттерны системных инструкций, RAG и корпоративные стандарты внедрения ИИ в рабочие процессы</p>
+  <p class="meta">Обновлено: <strong>8 октября 2026</strong></p>
+  <a class="back-link" href="https://mrvolkomorov.github.io/ai-fmcg-portal/" target="_blank" rel="noopener">← Назад к каталогу AI для FMCG</a>
+</header>
+
+<div class="section-title">Безопасность и обезличивание — что можно класть в ИИ, а что нельзя</div>
+
+<div class="card">
+  <div class="card-header">
+    <div class="card-num" style="background:#7b1fa2;">1</div>
+    <div class="card-title-area">
+      <h3><a href="http://pravo.gov.ru/proxy/ips/?docbody=&nd=102033535" target="_blank" rel="noopener">152-ФЗ «О персональных данных»</a> — pravo.gov.ru</h3>
+      <p class="summary">Действующая редакция базового закона, регулирующего обработку персональных данных в РФ: что считается ПДн, кто оператор, какие обязанности по согласию, хранению, трансграничной передаче и уничтожению. Включён реестр операторов Роскомнадзора, требования к локализации данных граждан РФ.</p>
+      <p class="useful"><strong>Чем полезно:</strong> когда готовите памятку по обезличиванию в отделе, первая ссылка — это закон. ИИ в облаке зарубежного сервиса формально попадает под трансграничную передачу ПДн, поэтому для персональных данных сотрудников и клиентов — нужна локальная обработка или явный отказ от их загрузки.</p>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <div class="card-num" style="background:#7b1fa2;">2</div>
+    <div class="card-title-area">
+      <h3><a href="https://rkn.gov.ru/activity/personal-data/p3460/" target="_blank" rel="noopener">Роскомнадзор — методические рекомендации по обезличиванию ПДн</a> — rkn.gov.ru</h3>
+      <p class="summary">Официальные методические рекомендации Роскомнадзора по обезличиванию персональных данных. Описывает цели, методы (замена, удаление, обобщение, шифрование) и требования к доказательной базе того, что данные стали неперсонализированными.</p>
+      <p class="useful"><strong>Чем полезно:</strong> аргумент для юриста и службы безопасности, что «мы загрузили в ИИ не персональные, а обезличенные данные». Метод замены идентификаторов плейсхолдерами ([ФИО_1], [ИНН_1], [Сеть 1]) — это частный случай метода замены из рекомендаций.</p>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <div class="card-num" style="background:#7b1fa2;">3</div>
+    <div class="card-title-area">
+      <h3><a href="https://www.nist.gov/itl/ai-risk-management-framework" target="_blank" rel="noopener">NIST AI Risk Management Framework</a> — nist.gov</h3>
+      <p class="summary">Рамочный стандарт Национального института стандартов и технологий США по управлению рисками ИИ-систем. Четыре функции: Govern, Map, Measure, Manage. Подходит для оценки пригодности ИИ-проекта и блокнота к рабочему процессу отдела.</p>
+      <p class="useful"><strong>Чем полезно:</strong> когда руководство спрашивает «а это безопасно?» — даёт ответ не из слов «нам так кажется», а из общепринятой международной методики. Карта рисков помогает определить, какие задачи доверять ИИ, а какие — нет.</p>
+    </div>
+  </div>
+</div>
+
+<div class="section-title">Промпт-инжиниринг — как писать сильные системные инструкции</div>
+
+<div class="card">
+  <div class="card-header">
+    <div class="card-num" style="background:#e65100;">4</div>
+    <div class="card-title-area">
+      <h3><a href="https://www.promptingguide.ai/" target="_blank" rel="noopener">Prompting Guide</a> · DAIR.AI — promptingguide.ai</h3>
+      <p class="summary">Независимый открытый гайд по промпт-инжинирингу от команды DAIR.AI. Покрывает базовые техники (zero-shot, few-shot, chain-of-thought), продвинутые (ReAct, self-consistency), риски (prompt injection, jailbreak) и паттерны системных инструкций для ассистентов.</p>
+      <p class="useful"><strong>Чем полезно:</strong> раздел «System prompting» — основа для пятёрки «Роль + Контекст + Знания + Формат + Запреты + Нет данных» из занятия. В отличие от гайдов вендоров, не привязан к конкретному сервису — работает как для проектов в ChatGPT, так и для Claude, Gemini Notebook, корпоративных LLM.</p>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <div class="card-num" style="background:#e65100;">5</div>
+    <div class="card-title-area">
+      <h3><a href="https://cloud.google.com/discover/what-is-prompt-engineering" target="_blank" rel="noopener">Google Cloud — Introduction to prompt engineering</a> — cloud.google.com</h3>
+      <p class="summary">Обзорная статья Google Cloud о промпт-инжиниринге: zero-shot, one-shot, few-shot, chain-of-thought, role prompting. Подходит как вводный материал для тех, кто никогда системно не работал с паттернами формулировки запросов.</p>
+      <p class="useful"><strong>Чем полезно:</strong> раздел про role prompting («дайте модели роль») — это и есть приём «Ты помощник коммерческого директора» из системной инструкции. Материал общего характера, не привязан к сервисам ChatGPT или Claude.</p>
+    </div>
+  </div>
+</div>
+
+<div class="section-title">RAG и работа с контекстом — почему блокнот «отвечает только из файлов»</div>
+
+<div class="card">
+  <div class="card-header">
+    <div class="card-num" style="background:#7b1fa2;">6</div>
+    <div class="card-title-area">
+      <h3><a href="https://cloud.google.com/use-cases/retrieval-augmented-generation" target="_blank" rel="noopener">Google Cloud — Retrieval Augmented Generation (RAG)</a> — cloud.google.com</h3>
+      <p class="summary">Объяснение концепции RAG: модель отвечает не «из головы», а на основе релевантных фрагментов, найденных в базе знаний. Описывает, зачем нужен RAG, как устроен retrieval и какие задачи решает.</p>
+      <p class="useful"><strong>Чем полезно:</strong> объясняет, почему Gemini Notebook «отвечает только из источников» и приводит сноски — это реализация RAG поверх ваших файлов. Помогает аргументировать выбор инструмента для работы с договорами и регламентами, где важна проверяемость по первоисточнику.</p>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <div class="card-num" style="background:#7b1fa2;">7</div>
+    <div class="card-title-area">
+      <h3><a href="https://notebooklm.google.com/" target="_blank" rel="noopener">Gemini Notebook (бывший NotebookLM)</a> — notebooklm.google.com</h3>
+      <p class="summary">Входная точка сервиса Gemini Notebook от Google. Поддерживает до 50 источников на бесплатном тарифе, генерирует ответы только по загруженным документам, приводит цитаты с указанием места в источнике. Доступен в России через VPN.</p>
+      <p class="useful"><strong>Чем полезно:</strong> это один из сервисов, которые разбираются на занятии. Здесь — только официальная точка входа, без пошаговых инструкций. Для практики используйте раздаточные материалы занятия и собственные документы.</p>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <div class="card-num" style="background:#7b1fa2;">8</div>
+    <div class="card-title-area">
+      <h3><a href="https://habr.com/ru/search/?q=RAG" target="_blank" rel="noopener">Habr — обзорные статьи по RAG на русском</a> — habr.com</h3>
+      <p class="summary">Подборка русскоязычных статей по Retrieval Augmented Generation: что это, как устроено, какие библиотеки использовать (LangChain, LlamaIndex, FAISS), примеры внедрения в российских компаниях. Включая разборы практических кейсов от разработчиков.</p>
+      <p class="useful"><strong>Чем полезно:</strong> для разговора с руководством на русском. Когда спрашивают «а что такое RAG и зачем оно нам» — подборка статей на Habr помогает объяснить концепцию без технического жаргона и показать, что это уже работает в российских реалиях.</p>
+    </div>
+  </div>
+</div>
+
+<div class="section-title">Корпоративные стандарты — как не изобретать велосипед</div>
+
+<div class="card">
+  <div class="card-header">
+    <div class="card-num" style="background:#e65100;">9</div>
+    <div class="card-title-area">
+      <h3><a href="https://owasp.org/www-project-top-10-for-large-language-model-applications/" target="_blank" rel="noopener">OWASP Top 10 for LLM Applications</a> — owasp.org</h3>
+      <p class="summary">Список из десяти наиболее критичных рисков при работе с LLM-приложениями: prompt injection, insecure output handling, training data poisoning, model DoS и другие. Поддерживается открытым сообществом OWASP, обновляется ежегодно.</p>
+      <p class="useful"><strong>Чем полезно:</strong> опорный список рисков для регламента работы с ИИ в отделе. Когда обсуждаете с безопасниками, что «мы загружаем файлы в ИИ», полезно показать им, что вы знакомы с этим списком и проверили свои сценарии по нему.</p>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <div class="card-num" style="background:#e65100;">10</div>
+    <div class="card-title-area">
+      <h3><a href="https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai" target="_blank" rel="noopener">McKinsey — The State of AI</a> — mckinsey.com</h3>
+      <p class="summary">Ежегодный отчёт McKinsey о состоянии ИИ в корпоративных процессах: где компании внедряют, какие функции первыми получают эффект, какие барьеры останавливают, сколько часов экономится. Глобальный срез по индустриям, включая retail и CPG.</p>
+      <p class="useful"><strong>Чем полезно:</strong> для презентации ценности ИИ-проектов в отделе. Цифры McKinsey по экономии времени (3–5 часов в неделю у активных пользователей) — это аргумент, который понимает финансовый директор и совет директоров. На русском такие отчёты появляются с задержкой, в оригинале — свежее.</p>
+    </div>
+  </div>
+</div>
+
+<div class="cheatsheet">
+  <h2>📌 Шпаргалка по выбору — что открыть в какой ситуации</h2>
+  <div class="cheat-row"><span class="cheat-task">Нужно разобраться в длинном отчёте по первоисточнику</span><span class="cheat-arrow">→</span><span class="cheat-tool">Gemini Notebook + Google Cloud RAG</span></div>
+  <div class="cheat-row"><span class="cheat-task">Нужно убрать личные данные перед загрузкой</span><span class="cheat-arrow">→</span><span class="cheat-tool">Методика Роскомнадзора + зоны (красная/жёлтая/зелёная)</span></div>
+  <div class="cheat-row"><span class="cheat-task">Нужно понять, что в принципе нельзя класть в ИИ</span><span class="cheat-arrow">→</span><span class="cheat-tool">152-ФЗ + раздел рисков из памятки занятия</span></div>
+  <div class="cheat-row"><span class="cheat-task">Нужно написать сильную системную инструкцию</span><span class="cheat-arrow">→</span><span class="cheat-tool">Prompting Guide (DAIR.AI) — раздел System Prompting</span></div>
+  <div class="cheat-row"><span class="cheat-task">Нужно доказать безопасность ИИ-проекта руководству</span><span class="cheat-arrow">→</span><span class="cheat-tool">NIST AI RMF + OWASP Top 10 for LLM</span></div>
+  <div class="cheat-row"><span class="cheat-task">Нужно объяснить ценность RAG внутри отдела</span><span class="cheat-arrow">→</span><span class="cheat-tool">Обзор RAG на Habr + материалы из занятия</span></div>
+  <div class="cheat-row"><span class="cheat-task">Нужно начать с чужого корпоративного опыта</span><span class="cheat-arrow">→</span><span class="cheat-tool">McKinsey «The State of AI» — глобальный срез</span></div>
+  <div class="cheat-row"><span class="cheat-task">Нужно обучить ИИ делать что-то конкретное по правилам</span><span class="cheat-arrow">→</span><span class="cheat-tool">Google Cloud — Role Prompting + пятёрка «Роль + Контекст + Знания + Формат + Запреты»</span></div>
+</div>
+
+<footer>
+  <p>Материалы к воркшопу Алексея Парфуна «AI для FMCG 2026» — занятие 4 «ИИ, который помнит контекст»</p>
+  <p style="margin-top:4px;"><a href="https://mrvolkomorov.github.io/ai-fmcg-portal/">← Назад к каталогу AI для FMCG</a> · <a href="https://github.com/mrvolkomorov/ai-fmcg-context-materials">Репозиторий на GitHub</a></p>
+</footer>
+
+</div>
+</body>
+</html>
